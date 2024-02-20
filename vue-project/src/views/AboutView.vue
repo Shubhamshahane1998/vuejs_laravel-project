@@ -11,11 +11,7 @@
             <th scope="col">age</th>
             <th scope="col">gender</th>
             <th scope="col" style="margin-right: 50px">
-              <select
-                class="form-select form-select-sm select"
-                name="Developer"
-                @change="developer($event)"
-              >
+              <select class="form-select form-select-sm select" name="Developer" @change="developer($event)">
                 <option value="All">Department</option>
                 <option value="Designer">Designer</option>
                 <option value="Frontend Developer">Frontend Developer</option>
@@ -38,13 +34,8 @@
             <td>{{ row.designation }}</td>
             <td style="border-radius: 20px">
               <div class="d-grid gap-4 d-md-flex justify-content-md-center">
-                <a href="#"
-                  ><router-link
-                    :to="{ name: 'Edit', params: { id: row.Id } }"
-                    class="btn btn-success"
-                    >Edit</router-link
-                  ></a
-                >
+                <a href="#"><router-link :to="{ name: 'Edit', params: { id: row.Id } }"
+                    class="btn btn-success">Edit</router-link></a>
                 <a href="#" class="btn btn-danger" @click="Delete(row.Id)">Delete</a>
               </div>
             </td>
@@ -58,7 +49,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import axios from "axios";
-import { ref, reactive } from "vue";
+// import { ref, reactive } from "vue";
 
 export default defineComponent({
   created() {
@@ -144,7 +135,7 @@ export default defineComponent({
   display: flex;
 }
 
-.user_row > div {
+.user_row>div {
   flex: 1;
   text-align: center;
 }
